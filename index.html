@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>N1智能手表 - 899元旗舰体验 | 隐藏摄像 备用机王</title>
+<meta name="description" content="N1智能手表，外观如Apple Watch，内置隐藏摄像头与麦克风，安卓系统自由安装应用。仅需899元，应急记录、备用通讯、健康监测一腕搞定。">
+<meta name="keywords" content="N1手表,智能手表,隐藏摄像,安卓手表,血压检测,备用机">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#e63946;--dark:#1a1a2e;--gold:#f4a261;--white:#fff;
+  --bg:#0f0f1a;--card:rgba(255,255,255,.06);--glass:rgba(255,255,255,.1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* Promo Bar */
+.promo-bar{background:linear-gradient(90deg,var(--red),#c0392b,var(--red));text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:1px;position:relative;overflow:hidden}
+.promo-bar::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shimmer 3s infinite}
+@keyframes shimmer{to{left:200%}}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:20px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(230,57,70,.15),transparent 70%),radial-gradient(ellipse at 80% 80%,rgba(244,162,97,.08),transparent 50%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px}
+.hero-badge{display:inline-block;background:var(--red);color:var(--white);padding:6px 20px;border-radius:50px;font-size:13px;font-weight:700;margin-bottom:20px;letter-spacing:2px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(230,57,70,.4)}50%{box-shadow:0 0 0 12px rgba(230,57,70,0)}}
+.hero h1{font-size:clamp(2rem,7vw,3.5rem);font-weight:900;margin-bottom:16px;line-height:1.2}
+.hero h1 span{background:linear-gradient(135deg,var(--gold),#e76f51);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:clamp(1rem,3vw,1.3rem);color:rgba(255,255,255,.7);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-img{width:min(320px,80vw);margin:0 auto 32px;border-radius:24px;box-shadow:0 20px 60px rgba(230,57,70,.3);transition:transform .5s}
+.hero-img:hover{transform:scale(1.03) rotate(1deg)}
+.price-box{display:inline-flex;align-items:baseline;gap:8px;background:linear-gradient(135deg,rgba(230,57,70,.2),rgba(244,162,97,.1));border:2px solid var(--red);border-radius:16px;padding:16px 32px;margin-bottom:28px}
+.price-box .currency{font-size:1.4rem;font-weight:700;color:var(--gold)}
+.price-box .amount{font-size:3.5rem;font-weight:900;color:var(--red);line-height:1}
+.price-box .original{font-size:1rem;color:rgba(255,255,255,.4);text-decoration:line-through}
+
+/* CTA Buttons */
+.cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;border-radius:50px;font-size:1.05rem;font-weight:700;border:none;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--red),#c0392b);color:var(--white);box-shadow:0 4px 20px rgba(230,57,70,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(230,57,70,.6)}
+.btn-secondary{background:var(--glass);color:var(--white);border:2px solid rgba(255,255,255,.2)}
+.btn-secondary:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+
+/* Scroll indicator */
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);animation:bounce 2s infinite;color:rgba(255,255,255,.4);font-size:24px}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+
+/* Section */
+section{padding:80px 20px;max-width:1200px;margin:0 auto}
+.section-tag{text-align:center;font-size:13px;font-weight:700;color:var(--red);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.section-title{text-align:center;font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;margin-bottom:48px;line-height:1.3}
+
+/* Features Grid */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.feature-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;transition:all .4s;position:relative;overflow:hidden}
+.feature-card:hover{transform:translateY(-4px);border-color:rgba(230,57,70,.3);box-shadow:0 8px 32px rgba(230,57,70,.1)}
+.feature-card .icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px;background:linear-gradient(135deg,rgba(230,57,70,.2),rgba(244,162,97,.1))}
+.feature-card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.feature-card p{color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.gallery-item{border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px}
+.gallery-item:hover .overlay{opacity:1}
+
+/* Video Section */
+.video-wrapper{position:relative;width:100%;max-width:800px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.1)}
+.video-wrapper video{width:100%;display:block}
+.video-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.video-tab{padding:10px 24px;border-radius:50px;background:var(--card);border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:all .3s;font-size:.9rem}
+.video-tab.active{background:var(--red);border-color:var(--red)}
+.video-tab:hover{border-color:var(--red)}
+
+/* Spec Table */
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.spec-item{display:flex;justify-content:space-between;padding:16px 20px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,.06)}
+.spec-item .label{color:rgba(255,255,255,.5)}
+.spec-item .value{font-weight:600;color:var(--gold)}
+
+/* Comparison */
+.comparison{max-width:700px;margin:0 auto;border-radius:20px;overflow:hidden;border:2px solid rgba(255,255,255,.1)}
+.comp-row{display:flex;padding:16px 24px;transition:background .3s}
+.comp-row:nth-child(odd){background:rgba(255,255,255,.03)}
+.comp-row:hover{background:rgba(230,57,70,.05)}
+.comp-row.header{background:linear-gradient(135deg,var(--red),#c0392b);font-weight:700;font-size:.95rem}
+.comp-row > div{flex:1;text-align:center}
+.comp-row > div:first-child{text-align:left;font-weight:600}
+.comp-check{color:#2ecc71;font-size:1.1rem}
+.comp-cross{color:#e74c3c;font-size:1.1rem}
+
+/* Urgency */
+.urgency{background:linear-gradient(135deg,rgba(230,57,70,.1),rgba(244,162,97,.05));border:2px solid rgba(230,57,70,.3);border-radius:24px;padding:40px;text-align:center;max-width:700px;margin:0 auto 40px}
+.urgency h3{font-size:1.5rem;margin-bottom:8px}
+.urgency .countdown{display:flex;gap:16px;justify-content:center;margin:24px 0}
+.countdown-item{background:var(--dark);border-radius:12px;padding:12px 16px;min-width:70px}
+.countdown-item .num{font-size:2rem;font-weight:900;color:var(--red);line-height:1}
+.countdown-item .unit{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:4px}
+.stock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(230,57,70,.15);color:var(--red);padding:6px 16px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.stock-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Contact / Order */
+.order-section{background:linear-gradient(to bottom,transparent,rgba(230,57,70,.05));text-align:center}
+.qq-card{display:inline-flex;align-items:center;gap:16px;background:var(--card);border:2px solid rgba(255,255,255,.1);border-radius:20px;padding:24px 36px;margin:20px 0}
+.qq-card .qq-icon{width:48px;height:48px;background:linear-gradient(135deg,#12b7f5,#0d96d2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}
+.qq-card .qq-num{font-size:1.8rem;font-weight:800;letter-spacing:2px}
+.qq-card .qq-label{font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* Footer */
+footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.3);font-size:.85rem}
+
+/* Floating CTA */
+.float-cta{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:100;background:linear-gradient(135deg,var(--red),#c0392b);color:var(--white);padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;box-shadow:0 4px 20px rgba(230,57,70,.5);cursor:pointer;border:none;display:flex;align-items:center;gap:8px;transition:all .3s;animation:floatPulse 2s infinite}
+.float-cta:hover{transform:translateX(-50%) translateY(-2px)}
+@keyframes floatPulse{0%,100%{box-shadow:0 4px 20px rgba(230,57,70,.5)}50%{box-shadow:0 4px 30px rgba(230,57,70,.8)}}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:200;display:none;align-items:center;justify-content:center;cursor:pointer;padding:20px}
+.lightbox.active{display:flex}
+.lightbox img{max-width:95%;max-height:95%;border-radius:12px;object-fit:contain}
+.lightbox-close{position:absolute;top:20px;right:20px;font-size:32px;color:var(--white);cursor:pointer;background:none;border:none;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+
+/* Responsive */
+@media(max-width:640px){
+  .hero h1{font-size:1.8rem}
+  .price-box .amount{font-size:2.5rem}
+  section{padding:50px 16px}
+  .cta-group{flex-direction:column;align-items:center}
+  .btn{width:100%;justify-content:center;padding:14px 24px}
+  .comp-row{font-size:.85rem;padding:12px 16px}
+  .qq-card{flex-direction:column;padding:20px}
+  .qq-card .qq-num{font-size:1.4rem}
+  .countdown-item{min-width:56px;padding:10px 12px}
+  .countdown-item .num{font-size:1.5rem}
+  .float-cta{bottom:12px;padding:12px 24px;font-size:.9rem}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+}
+
+/* Entrance animations */
+.reveal{opacity:0;transform:translateY(30px);transition:all .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- Promo Bar -->
+<div class="promo-bar">
+  🔥 限时特惠 · 原价1299元 → 现仅需 <strong>899元</strong> · 数量有限先到先得 🔥
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">2026 新品首发</div>
+    <img class="hero-img" src="https://i.imgur.com/QPdVdDT.jpeg" alt="N1智能手表产品图">
+    <h1>N1 <span>智能手表</span></h1>
+    <p class="hero-sub">外表如Apple Watch，内在是全能战士。<br>隐藏摄像头 · 独立通话 · 安卓系统 · 血压检测</p>
+    <div class="price-box">
+      <span class="currency">¥</span>
+      <span class="amount">899</span>
+      <span class="original">原价 ¥1299</span>
+    </div>
+    <div class="cta-group">
+      <a href="#order" class="btn btn-primary">💬 立即咨询下单</a>
+      <a href="#gallery" class="btn btn-secondary">📸 查看实拍</a>
+    </div>
+  </div>
+  <div class="scroll-hint">↓</div>
+</section>
+
+<!-- Core Features -->
+<section id="features">
+  <div class="section-tag reveal">CORE FEATURES</div>
+  <h2 class="section-title reveal">六大核心能力 · 一腕尽收</h2>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="icon">📸</div>
+      <h3>隐藏式摄像头</h3>
+      <p>表盘内置高清摄像头，外观无任何痕迹。支持拍照和录像，关键时刻默默记录，不错过任何重要瞬间。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">📞</div>
+      <h3>独立通话</h3>
+      <p>内置SIM卡槽，支持4G全网通。无需手机即可拨打电话，真正的独立通讯设备，应急场景下的可靠伙伴。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">🤖</div>
+      <h3>安卓开放系统</h3>
+      <p>运行完整安卓系统，自由安装任意应用。微信、导航、翻译、备忘录……需要什么装什么，扩展性无限。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">❤️</div>
+      <h3>健康监测</h3>
+      <p>实时心率、血压检测、血氧饱和度、睡眠分析。24小时贴身健康管家，随时掌握身体状态。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">⚡</div>
+      <h3>应急快拍</h3>
+      <p>比手机更快——抬手即拍。手机反应慢来不及？N1抬腕即记录，精彩瞬间不再错过。户外运动、突发事件最佳搭档。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">🎨</div>
+      <h3>Apple Watch级外观</h3>
+      <p>方形圆角表盘设计，质感做工精良。戴在手上低调内敛，日常佩戴不突兀，工作社交皆宜。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Product Gallery -->
+<section id="gallery">
+  <div class="section-tag reveal">GALLERY</div>
+  <h2 class="section-title reveal">实机拍摄 · 所见即所得</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/QPdVdDT.jpeg" alt="N1手表正面">
+      <div class="overlay"><span>产品正面</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/8H13onD.jpeg" alt="N1手表侧面">
+      <div class="overlay"><span>侧面细节</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/GuuqFLx.jpeg" alt="N1手表功能展示">
+      <div class="overlay"><span>功能展示</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/KttOSo8.jpeg" alt="N1手表界面">
+      <div class="overlay"><span>系统界面</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/XjpXuiI.jpeg" alt="N1手表佩戴">
+      <div class="overlay"><span>佩戴效果</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/ZOJeloZ.jpeg" alt="N1手表配件">
+      <div class="overlay"><span>完整配件</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Section -->
+<section id="videos">
+  <div class="section-tag reveal">VIDEO</div>
+  <h2 class="section-title reveal">视频展示 · 眼见为实</h2>
+  <div class="video-tabs reveal">
+    <div class="video-tab active" onclick="switchVideo('demo',this)">🎬 实机拍摄效果</div>
+    <div class="video-tab" onclick="switchVideo('unbox1',this)">📦 开箱介绍（上）</div>
+    <div class="video-tab" onclick="switchVideo('unbox2',this)">📦 开箱介绍（下）</div>
+  </div>
+  <div class="video-wrapper reveal">
+    <video id="mainVideo" controls playsinline preload="metadata" poster="https://i.imgur.com/QPdVdDT.jpeg">
+      <source src="https://i.imgur.com/DHWGnup.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- Specs -->
+<section id="specs">
+  <div class="section-tag reveal">SPECIFICATIONS</div>
+  <h2 class="section-title reveal">技术参数</h2>
+  <div class="spec-grid">
+    <div class="spec-item reveal"><span class="label">型号</span><span class="value">N1</span></div>
+    <div class="spec-item reveal"><span class="label">系统</span><span class="value">Android</span></div>
+    <div class="spec-item reveal"><span class="label">网络</span><span class="value">4G全网通（SIM卡）</span></div>
+    <div class="spec-item reveal"><span class="label">摄像头</span><span class="value">隐藏式高清镜头</span></div>
+    <div class="spec-item reveal"><span class="label">通话</span><span class="value">独立拨号 · 免提通话</span></div>
+    <div class="spec-item reveal"><span class="label">健康</span><span class="value">心率 · 血压 · 血氧</span></div>
+    <div class="spec-item reveal"><span class="label">扩展</span><span class="value">自由安装第三方应用</span></div>
+    <div class="spec-item reveal"><span class="label">外观</span><span class="value">方形圆角 · 类AW设计</span></div>
+    <div class="spec-item reveal"><span class="label">价格</span><span class="value" style="color:var(--red)">¥899（限时）</span></div>
+  </div>
+</section>
+
+<!-- Use Scenarios -->
+<section id="scenarios">
+  <div class="section-tag reveal">SCENARIOS</div>
+  <h2 class="section-title reveal">六大场景 · 随时随地</h2>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="icon">🛡️</div>
+      <h3>应急记录</h3>
+      <p>突发情况下，抬手即可开始录像。无需解锁手机，第一视角记录现场，保护自身权益。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">🏃</div>
+      <h3>运动记录</h3>
+      <p>跑步、骑行、徒步……记录运动精彩瞬间。比手机更轻便，不影响运动节奏。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">📱</div>
+      <h3>备用通讯</h3>
+      <p>手机没电或遗失时，N1独立通话功能保障通讯不断联。出差旅行必备。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">💼</div>
+      <h3>会议备忘</h3>
+      <p>静默记录会议内容，事后回顾不遗漏任何重要信息。比录音笔更隐蔽更便捷。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">👴</div>
+      <h3>关爱家人</h3>
+      <p>血压监测、一键通话，给父母一个贴身的健康守护和通讯工具。</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="icon">🎯</div>
+      <h3>比手机更快</h3>
+      <p>手机掏出、解锁、打开相机至少5秒。N1抬腕即拍，1秒记录。精彩瞬间不等人。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency + Order -->
+<section id="order" class="order-section">
+  <div class="section-tag reveal">ORDER NOW</div>
+  <h2 class="section-title reveal">立即下单 · 限时特惠</h2>
+
+  <div class="urgency reveal">
+    <div class="stock-badge"><span class="stock-dot"></span> 仅剩少量现货</div>
+    <h3>⏰ 限时优惠倒计时</h3>
+    <div class="countdown" id="countdown">
+      <div class="countdown-item"><div class="num" id="cd-days">00</div><div class="unit">天</div></div>
+      <div class="countdown-item"><div class="num" id="cd-hours">00</div><div class="unit">时</div></div>
+      <div class="countdown-item"><div class="num" id="cd-mins">00</div><div class="unit">分</div></div>
+      <div class="countdown-item"><div class="num" id="cd-secs">00</div><div class="unit">秒</div></div>
+    </div>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:8px">优惠价 <strong style="color:var(--red);font-size:1.5rem">¥899</strong> <span style="text-decoration:line-through;color:rgba(255,255,255,.3)">¥1299</span></p>
+  </div>
+
+  <div class="reveal">
+    <p style="margin-bottom:12px;color:rgba(255,255,255,.7)">添加QQ咨询 · 即刻下单 · 全国包邮</p>
+    <div class="qq-card">
+      <div class="qq-icon">Q</div>
+      <div>
+        <div class="qq-num">3758868889</div>
+        <div class="qq-label">扫码或搜索QQ号添加好友咨询</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px" class="reveal">
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=3758868889&site=qq&menu=yes" target="_blank" class="btn btn-primary" style="font-size:1.1rem;padding:18px 48px">💬 点击直接QQ咨询</a>
+  </div>
+
+  <div style="margin-top:32px;color:rgba(255,255,255,.4);font-size:.85rem" class="reveal">
+    <p>✅ 全国包邮 ✅ 7天无理由退换 ✅ 质保一年</p>
+    <p style="margin-top:8px">支持微信支付 · 支付宝</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>N1智能手表 · 官方销售页</p>
+  <p style="margin-top:4px">咨询QQ：3758868889 · 全国包邮</p>
+</footer>
+
+<!-- Floating CTA -->
+<button class="float-cta" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+  💬 ¥899 立即咨询
+</button>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+// Countdown Timer (7 days from now)
+function initCountdown(){
+  const end=new Date();
+  end.setDate(end.getDate()+7);
+  end.setHours(23,59,59);
+  function tick(){
+    const now=new Date();
+    let diff=Math.max(0,(end-now)/1000);
+    const d=Math.floor(diff/86400);diff%=86400;
+    const h=Math.floor(diff/3600);diff%=3600;
+    const m=Math.floor(diff/60);
+    const s=Math.floor(diff%60);
+    document.getElementById('cd-days').textContent=String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent=String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent=String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent=String(s).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+}
+initCountdown();
+
+// Scroll Reveal
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.15});
+reveals.forEach(el=>observer.observe(el));
+
+// Video Switching
+const videos={
+  demo:'https://i.imgur.com/DHWGnup.mp4',
+  unbox1:'https://i.imgur.com/c9RbMPa.mp4',
+  unbox2:'https://i.imgur.com/x8qbaF1.mp4'
+};
+function switchVideo(key,tab){
+  document.querySelectorAll('.video-tab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  const v=document.getElementById('mainVideo');
+  v.src=videos[key];
+  v.load();
+  v.play().catch(()=>{});
+}
+
+// Lightbox
+function openLightbox(el){
+  const img=el.querySelector('img');
+  document.getElementById('lightbox-img').src=img.src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+
+// Hide floating CTA when near order section
+const orderSection=document.getElementById('order');
+const floatCta=document.querySelector('.float-cta');
+window.addEventListener('scroll',()=>{
+  const rect=orderSection.getBoundingClientRect();
+  floatCta.style.display=(rect.top<window.innerHeight&&rect.bottom>0)?'none':'flex';
+});
+</script>
+</body>
+</html>
